@@ -1,7 +1,7 @@
 <?php
 
-
 namespace FluxEco\JsonSchemaDocument\Core\Ports;
+
 use FluxEco\JsonSchemaDocument\Core\Domain;
 
 class SchemaFileService
@@ -12,18 +12,19 @@ class SchemaFileService
 
     }
 
-    public static function new(): self
+    public static function new() : self
     {
         return new self();
     }
 
-    public function getSchemaDocument(string $jsonSchemaYamlFilePath): Domain\SchemaDocument {
+    public function getSchemaDocument(string $jsonSchemaYamlFilePath) : Domain\SchemaDocument
+    {
         $schema = yaml_parse(file_get_contents($jsonSchemaYamlFilePath));
         $properties = [];
-        foreach($schema['properties'] as $key => $property) {
-            $properties[$key] = Domain\Models\SchemaObject::new($property['type']);
+        foreach ($schema['properties'] as $key => $property) {
+            $properties[$key] = Domain\Models\SchemaObject::new($key, $property['type']);
         }
 
-        return Domain\SchemaDocument::new($properties);
+        return Domain\SchemaDocument::new($schema['name'], $properties);
     }
 }

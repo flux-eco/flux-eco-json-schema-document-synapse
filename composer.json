@@ -1,18 +1,12 @@
 {
   "name": "flux-eco/json-schema-document",
   "description": "Component for flux-capacitor apps developed by fluxlabs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "flux-app",
   "keywords": [
-    "flux-ecosystem",
-    "flux-capacitor",
-    "fluxlabs ag",
-    "microservice",
-    "event sourcing",
-    "cqrs",
-    "json schema",
-    "asyncapi",
-    "openapi"
+    "flux-eco",
+    "json-schema-document",
+    "fluxlabs"
   ],
   "homepage": "https://fluxlabs.ch",
   "license": "GPL-3.0-only",
@@ -21,7 +15,7 @@
       "name": "fluxlabs ag",
       "email": "support@fluxlabs.ch",
       "homepage": "https://fluxlabs.ch",
-      "role": "Developer"
+      "role": "Maintainer, Developer"
     }
   ],
   "support": {
@@ -31,18 +25,10 @@
     "php": ">=8.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "ext-yaml": "*",
-    "composer-runtime-api": ">=2.1",
-    "psr/http-factory": ">=1.0",
-    "psr/http-message": ">=1.0",
-    "psr/http-server-handler": ">=1.0",
-    "psr/http-server-middleware": ">=1.0"
+    "ext-yaml": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": ">=9.5",
-    "composer/composer": ">=2.0",
-    "swoole/ide-helper": ">=4.6",
-    "symfony/console": ">=5.2"
+    "swoole/ide-helper": ">=4.6"
   },
   "autoload": {
     "psr-4": {
