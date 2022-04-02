@@ -17,8 +17,18 @@ class SchemaObject
         return new self($schemaObject);
     }
 
+    public function getKey(): string
+    {
+        return $this->schemaObject->getKey();
+    }
+
     public function getType(): string
     {
         return $this->schemaObject->getType();
+    }
+
+    public function getSchema(): array
+    {
+        return $this->schemaObject->toArray();
     }
 }
