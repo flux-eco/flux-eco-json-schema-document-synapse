@@ -1,7 +1,7 @@
 {
   "name": "flux-eco/json-schema-document",
   "description": "Component for flux-capacitor apps developed by fluxlabs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "flux-app",
   "keywords": [
     "flux-eco",

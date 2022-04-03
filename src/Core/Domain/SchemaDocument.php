@@ -4,26 +4,26 @@ namespace FluxEco\JsonSchemaDocument\Core\Domain;
 
 class SchemaDocument
 {
-    private string $name;
+    private string $title;
     /** @var Models\SchemaObject[] */
     private array $properties;
 
-    private function __construct(string $name, array $schemaObjects)
+    private function __construct(string $title, array $schemaObjects)
     {
-        $this->name = $name;
+        $this->title = $title;
         $this->properties = $schemaObjects;
     }
 
     public static function new(
-        string $name,
+        string $title,
         array $schemaObjects
     ) : self {
-        return new self($name, $schemaObjects);
+        return new self($title, $schemaObjects);
     }
 
-    public function getName() : string
+    public function getTitle() : string
     {
-        return $this->name;
+        return $this->title;
     }
 
     /** @return Models\SchemaObject[] */

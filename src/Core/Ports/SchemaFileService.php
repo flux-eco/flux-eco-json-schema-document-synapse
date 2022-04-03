@@ -25,6 +25,6 @@ class SchemaFileService
             $properties[$key] = Domain\Models\SchemaObject::new($key, $property['type']);
         }
 
-        return Domain\SchemaDocument::new($schema['name'], $properties);
+        return Domain\SchemaDocument::new($schema['title'], $properties);
     }
 }
