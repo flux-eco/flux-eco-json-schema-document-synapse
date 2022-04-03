@@ -33,8 +33,7 @@ class SchemaFile
 
     public static function fromFilePath(string $filePath): self
     {
-        $pathInfo = pathinfo($filePath);
-        $schemaObjectName = $pathInfo['filename'];
+        $schemaObjectName = pathinfo($filePath, PATHINFO_FILENAME);
         $schemaObjectArray = yaml_parse(file_get_contents($filePath));
         return new self($filePath, $schemaObjectName, $schemaObjectArray);
     }

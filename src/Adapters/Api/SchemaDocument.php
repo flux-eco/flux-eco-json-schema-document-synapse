@@ -41,8 +41,8 @@ class SchemaDocument
     }
 
     /** @return string */
-    public function getName() : string
+    public function getTitle() : string
     {
-        return $this->schemaDocument->getName();
+        return $this->schemaDocument->getTitle();
     }
 }
