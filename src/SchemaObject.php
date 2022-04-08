@@ -1,6 +1,6 @@
 <?php
 
-namespace FluxEco\JsonSchemaDocument\Adapters\Api;
+namespace FluxEco\JsonSchemaDocument;
 use FluxEco\JsonSchemaDocument\Core\Domain;
 
 class SchemaObject

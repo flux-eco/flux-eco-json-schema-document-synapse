@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## [1.0.1]
+* fixed namespace schema object
+
 ## [1.0.0]
 Features
 * Get a schema document object from a yaml schema
