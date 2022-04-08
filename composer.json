@@ -1,7 +1,7 @@
 {
   "name": "flux-eco/json-schema-document",
   "description": "Component for flux-capacitor apps developed by fluxlabs",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "type": "flux-app",
   "keywords": [
     "flux-eco",
@@ -31,9 +31,15 @@
     "swoole/ide-helper": ">=4.6"
   },
   "autoload": {
+    "files": [
+      "fn/getSchemaDocument.php"
+    ],
     "psr-4": {
       "FluxEco\\JsonSchemaDocument\\": [
         "src/"
+      ],
+      "fluxJsonSchemaDocument\\": [
+        "fn"
       ]
     }
   },

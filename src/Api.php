@@ -1,10 +1,10 @@
 <?php
 
 
-namespace FluxEco\JsonSchemaDocument\Adapters\Api;
+namespace FluxEco\JsonSchemaDocument;
 use FluxEco\JsonSchemaDocument\Core\Ports;
 
-class JsonSchemaDocumentApi
+class Api
 {
 
     private function __construct()
@@ -17,10 +17,10 @@ class JsonSchemaDocumentApi
         return new self();
     }
 
-    final public function getSchemaDocument(string $schemaFilePath): SchemaDocument
+    final public function getSchemaDocument(string $yamlSchemaFilePath): SchemaDocument
     {
         $service = Ports\SchemaFileService::new();
-        $schemaDocument = $service->getSchemaDocument($schemaFilePath);
+        $schemaDocument = $service->getSchemaDocument($yamlSchemaFilePath);
         return SchemaDocument::fromDomain($schemaDocument);
     }
 }
